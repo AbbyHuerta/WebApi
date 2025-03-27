@@ -4,21 +4,20 @@ using PracticaWebApiSonia.Model;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 
-namespace PracticaWebApiSonia.Controllers // Cambio a Controllers para seguir la convención
+namespace PracticaWebApiSonia.Controllers 
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductCategoryController : ControllerBase  // Renombrado a ProductCategoryController
+    public class ProductCategoryController : ControllerBase  
     {
         private readonly IProductCategoryRepository _repository;
 
-        // Constructor con inyección de dependencias
+       
         public ProductCategoryController(IProductCategoryRepository repository)
         {
             _repository = repository;
         }
 
-        // GET: api/ProductCategory
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductCategory>>> GetProductCategories()
         {
@@ -26,7 +25,6 @@ namespace PracticaWebApiSonia.Controllers // Cambio a Controllers para seguir la
             return Ok(productCategories);
         }
 
-        // GET: api/ProductCategory/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductCategory>> GetProductCategory(int id)
         {

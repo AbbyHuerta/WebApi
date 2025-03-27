@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PracticaWebApiSonia.Data;   // Mantén solo una vez esta línea
+using PracticaWebApiSonia.Data;   
 using PracticaWebApiSonia.Interface;
 using Microsoft.OpenApi.Models;
 using PracticaWebApiSonia.Repositories;
